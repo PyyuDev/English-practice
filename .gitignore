@@ -1,0 +1,21 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Machine learning / AI weights & heavy binaries
+*.pt
+*.bin
+*.safetensors
+*.onnx
+*.gguf
+
+# Local environment variables & secrets
+.env
+
+# System files
+.DS_Store
