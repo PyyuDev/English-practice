@@ -16,7 +16,7 @@ model_es_en = MarianMTModel.from_pretrained(es_en_name, use_safetensors=True).to
 
 # 3. Piper Settings (English Voice)
 PIPER_BIN = "piper"
-MODELO_ONNX = "en_US-ryan-high.onnx"
+MODELO_ONNX = "./voiceTts/en_US-ryan-high.onnx"
 
 def speak_english(english_text):
     """Sends English text to Piper TTS and plays it directly with aplay."""

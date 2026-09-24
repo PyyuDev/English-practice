@@ -18,7 +18,7 @@ OLLAMA_MODEL = "llama3.2:latest"
 
 # Ruta al ejecutable de Piper y al modelo ONNX
 PIPER_BIN = "./piper/piper"  # Ajusta la ruta a tu binario de piper
-PIPER_MODEL_ONNX = "en_US-ryan-high.onnx"
+PIPER_MODEL_ONNX = "./voiceTts/en_US-ryan-high.onnx"
 
 SAMPLE_RATE_REC = 16000
 
