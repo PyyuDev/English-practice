@@ -19,3 +19,13 @@ __pycache__/
 
 # System files
 .DS_Store
+
+# Ignore C# build outputs
+bin/
+obj/
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore video subtitles folder
+video-subtitle/

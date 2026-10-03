@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vlc="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
+        x:Class="CustomVideoPlayer.Views.MainWindow"
+        Title="Custom Video Player" Width="960" Height="720">
+
+    <Grid RowDefinitions="*, Auto, Auto" Background="#1E1E1E">
+        <!-- 1. Embedded Video Area (Single Window) -->
+        <Panel Grid.Row="0" Background="Black">
+            <vlc:VideoView x:Name="VideoViewer" 
+                           HorizontalAlignment="Stretch" 
+                           VerticalAlignment="Stretch" />
+        </Panel>
+
+        <!-- 2. Subtitles Panel (Below Video) -->
+        <Border Grid.Row="1" 
+                Background="#2A2A2A" 
+                CornerRadius="6" 
+                Margin="16,10" 
+                Padding="16"
+                MinHeight="90">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="6">
+                <!-- English Subtitle Line -->
+                <TextBlock x:Name="TextEnBlock" 
+                           Foreground="Yellow" 
+                           FontSize="20" 
+                           FontWeight="Bold" 
+                           TextAlignment="Center" 
+                           TextWrapping="Wrap" 
+                           Text="English subtitles will appear here" />
+
+                <!-- Spanish Subtitle Line -->
+                <TextBlock x:Name="TextEsBlock" 
+                           Foreground="White" 
+                           FontSize="18" 
+                           FontWeight="Normal" 
+                           TextAlignment="Center" 
+                           TextWrapping="Wrap" 
+                           Text="Los subtítulos en español aparecerán aquí" />
+            </StackPanel>
+        </Border>
+
+        <!-- 3. Control Buttons (At Bottom) -->
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Spacing="12" 
+                    Margin="0,0,0,16">
+            <Button x:Name="OpenVideoButton" Content="1. Open Video" Click="OnOpenVideoClicked" />
+            <Button x:Name="OpenJsonButton" Content="2. Open JSON Subtitles" Click="OnOpenJsonClicked" />
+            <TextBlock x:Name="StatusText" Text="Status: Ready" VerticalAlignment="Center" Foreground="Gray" Margin="10,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
